@@ -1,7 +1,7 @@
 from pathlib import Path
 from typing import List
 
-from utils.ioutils import read_image
+from depthsegment.utils.ioutils import read_image
 
 
 class DetectedObject:

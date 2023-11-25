@@ -2,7 +2,7 @@
 import argparse
 import logging
 
-from depthsegment.depth.depthapi import run_pipeline
+from depthsegment.depth_segment_api import run_pipeline
 
 LOG = logging.getLogger(__name__)
 

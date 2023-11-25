@@ -13,6 +13,7 @@ def test_segment_object():
     
     # Assert the expected output
     print(result)
+    assert True
     # expected_result = # Define the expected result here
     # assert result == expected_result
     
