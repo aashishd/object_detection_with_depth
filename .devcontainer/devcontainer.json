@@ -23,8 +23,16 @@
 				"ms-python.black-formatter",
 				"ms-python.black-formatter",
 				"ms-python.black-formatter",
+				"github.copilot",
+				"github.copilot-chat",
+				"github.copilot-labs",
 				"visualstudioexptteam.vscodeintellicode",
-				"visualstudioexptteam.vscodeintellicode-completions"
+				"visualstudioexptteam.vscodeintellicode-completions",
+				"njpwerner.autodocstring",
+				"076923.python-image-preview",
+				"ms-python.vscode-pylance",
+				"ms-python.black-formatter",
+				"ms-python.isort"
 			]
 		}
 	}
