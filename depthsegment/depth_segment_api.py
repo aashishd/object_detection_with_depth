@@ -87,8 +87,8 @@ def save_depth(imgd: ImageWithDepth):
 def save_object_segmasks(imgd: ImageWithDepthAndObjects):
     for i, obj in enumerate(imgd.objects):
         # resize object mask to the original image size
-        objmask = cv2.resize(obj.mask, imgd.inimg.imgdims()[::-1], interpolation=cv2.INTER_NEAREST)
-        outimg = imgd.inimg._imgt.permute(-2, -1, 0).numpy() * objmask.astype(bool)[..., None]
+        objmask = cv2.resize(obj.mask.astype(np.uint8), imgd.inimg.imgdims()[::-1], interpolation=cv2.INTER_NEAREST)
+        outimg = imgd.inimg._imgt.permute(-2, -1, 0).numpy() * objmask[..., None]
         
         # build outpath
         outpath = imgd.inimg.outpath
