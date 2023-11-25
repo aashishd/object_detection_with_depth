@@ -25,9 +25,10 @@ def segment_object(depth_map, bounding_box=None):
     region = np.uint8((region - min_val) / (max_val - min_val) * 255)
     
     # Automatically calculate the threshold using Otsu's Binarization
+    # _, thresholded = cv2.threshold(region, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
     _, thresholded = cv2.threshold(region, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
     
-    # Post-processing - Morphological operations - erode and dilate to remove small noises
+        # Post-processing - Morphological operations - erode and dilate to remove small noises
     cleaned = _apply_morph_ops(thresholded, 1)
     
     # repad the image to match the original size
@@ -35,7 +36,7 @@ def segment_object(depth_map, bounding_box=None):
         cleaned = _repad_mask(cleaned, depth_map.shape, bounding_box)
         thresholded = _repad_mask(thresholded, depth_map.shape, bounding_box)
     
-    return thresholded, cleaned
+    return thresholded.astype(bool), cleaned.astype(bool)
 
 
 def _repad_mask(mask, orig_shape, bounding_box, maskfill=0):
