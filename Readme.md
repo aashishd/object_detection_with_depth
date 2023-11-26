@@ -12,26 +12,34 @@ Here are some details about the important modules :
 5. `main.py` hosts the code for running as cli script (located outside the module in home directory of project)
 
 
-
-## How to run the project as cli script?
-1. Install all the dependencties given in [envs/environment.yml](envs/environment.yml) or [envs/environment-mac.yml](envs/environment.yml) based on your OS. It can be installed using following command :
+## Tests
+There are some tests present in the `tests` directory and can be run using following command :
 ```
-conda env create -n yourenvname -f envs/environment-mac.yml
+pytest tests
 ```
+**Note : Please make sure to add depthsegment module to python classpath before running tests**
 
-2. Once the enviroment is ready, either depthsegment can be installed as a package by using command :
+## Installing as package
+depthsegment can be installed as a package by using command :
 
 ```
 pip install -e depthsegment
 ```
 
-or 
-it can be run as a cli script by running the `main.py` in your created env as follows :
+**Note : Please make sure to add conda env manually as shown below**
+
+## Run the depthsegment as cli script
+1. Install all the dependencties given in [envs/environment.yml](envs/environment.yml) or [envs/environment-mac.yml](envs/environment.yml) based on your OS. It can be installed using following command :
+```
+conda env create -n yourenvname -f envs/environment-mac.yml
+```
+
+2. Once the enviroment is ready, depthsegment can be run as cli script by running the `main.py` in conda created env as follows :
 ```
 python depthsegment/main.py -i '/path/to/input/dir' -o '/path/to/output/dir' --obj
 ```
 
-The script accepts following aguments:
+**The script accepts following aguments:**
 
 `-i or --input`: Path to input directory where jpeg or png RGB files are located.
 
