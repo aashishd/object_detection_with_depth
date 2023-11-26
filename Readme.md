@@ -88,6 +88,11 @@ The object segmentation model uses CV2's Thresholding technique, combined with m
 The function accepts the `640 X 480` object mask, the bounding box of the object detected in the object detection model and outputs a mask of segmented object of size `640 X 480`
 
 
+## Illustration of project architecture
+
+![assets/images/project-architecture.png](assets/images/project-architecture.png)
+
+
 
 
 
