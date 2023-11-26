@@ -11,8 +11,8 @@ from torchvision.utils import draw_bounding_boxes
 
 import utils
 from depth.depth_detection import batch_depth
-from depth.domain import Image
-from depth.transform import input_transform
+from domain import Image
+from utils.transform import input_transform
 from utils.ioutils import read_image
 
 # %% Step 1: Initialize model with the best available weights & Initialize the inference transforms

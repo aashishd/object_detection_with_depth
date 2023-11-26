@@ -35,7 +35,11 @@
 				"ms-python.isort"
 			]
 		}
-	}
+	},
+
+	"containerEnv": {
+		"PYTHONPATH": "$PYTHONPATH:/workspaces/cyclomedia_project/depthsegment"
+	},
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

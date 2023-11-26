@@ -8,12 +8,12 @@ import numpy as np
 import torch
 
 from depthsegment.depth.depth_detection import batch_depth
-from depthsegment.depth.domain import (ImageWithDepth,
-                                       ImageWithDepthAndObjects, InputImage)
-from depthsegment.depth.transform import build_out_transform, input_transform
+from depthsegment.domain import (ImageWithDepth, ImageWithDepthAndObjects,
+                                 InputImage)
 from depthsegment.objects.object_detection import batch_object_detect
 from depthsegment.objects.segment import segment_object
 from depthsegment.utils.ioutils import write_image, write_tiff
+from depthsegment.utils.transform import build_out_transform, input_transform
 
 LOG = logging.getLogger(__name__)
 
