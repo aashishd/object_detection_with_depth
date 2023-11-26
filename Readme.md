@@ -41,6 +41,8 @@ python depthsegment/main.py -i '/path/to/input/dir' -o '/path/to/output/dir' --o
 
 **The script accepts following aguments:**
 
+**_Note: Script accepts images of any size, internally uses `640 X 480` to perform all operations, then resizes the images back to the original sizes._**
+
 `-i or --input`: Path to input directory where jpeg or png RGB files are located.
 
 `-o or --output`: Path to input directory where jpeg or png RGB files are located.
@@ -67,7 +69,7 @@ For every image.png,
 
 ## Details about the Computer Vision and Machine Learning components :
 ### Depth Segmentation
-For depth segmentation a GPLN <[Global-Local Path Networks for Monocular Depth Estimation with Vertical CutDepth](https://arxiv.org/abs/2201.07436)> models is used.
+For depth segmentation a GPLN model from the paper [Global-Local Path Networks for Monocular Depth Estimation with Vertical CutDepth](https://arxiv.org/abs/2201.07436) is used.
 
 The weights used are from HuggingFace for the GPLN model trained on NYU-V2 dataset.
 
